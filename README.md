@@ -14,15 +14,15 @@ Before you start working with the Pilotes Order Management Application, please e
 
 - **Docker (optional):** If you plan to run the application in a Docker container, make sure you have Docker installed on your system. You can download Docker from the [official Docker website](https://www.docker.com/get-started).
 
+
 ## API Reference
 
 #### Create a Pilotes Order
 
 ```http
-  POST /api/orders/{clientId}
+POST /api/orders/{clientId}
 ```
 Create a new Pilotes order by specifying the number of pilotes (5, 10, or 15).
-
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
@@ -33,7 +33,7 @@ Create a new Pilotes order by specifying the number of pilotes (5, 10, or 15).
 #### Update a Pilotes Order
 
 ```http
-  PUT /api/orders/${orderId}
+PUT /api/orders/${orderId}
 ```
 Update an existing Pilotes order within a 5-minute window after creation.
 
@@ -46,7 +46,7 @@ Update an existing Pilotes order within a 5-minute window after creation.
 #### Delete an Order
 
 ```http
-  DELETE /api/orders/{orderId}
+DELETE /api/orders/{orderId}
 ```
 Delete an existing Pilotes order by its ID.
 
@@ -57,7 +57,7 @@ Delete an existing Pilotes order by its ID.
 #### Search Orders
 
 ```http
-  GET /api/orders/search?searchTerm=Doe
+GET /api/orders/search?searchTerm=Doe
 ```
 Retrieve orders based on customer data.
 
@@ -70,7 +70,7 @@ Retrieve orders based on customer data.
 ### Create a Client
 
 ```http
-  POST /api/clients
+POST /api/clients
 ```
 Create a new client by providing client details.
 
@@ -83,7 +83,7 @@ Create a new client by providing client details.
 ### Update a Client
 
 ```http
-  PUT /api/clients/{clientId}
+PUT /api/clients/{clientId}
 ```
 
 Update an existing client by its ID.
@@ -98,7 +98,7 @@ Update an existing client by its ID.
 ### Retrieve Clients
 
 ```http
-  GET /api/clients
+GET /api/clients
 ```
 
 Update an existing client by its ID.
@@ -106,6 +106,7 @@ Update an existing client by its ID.
 | Parameter | Type     | Description                       |
 |:----------|:---------| :-------------------------------- |
 | `name`    | `string` | Optional. Search clients by name. |
+
 
 ## Authors
 
@@ -115,7 +116,6 @@ Update an existing client by its ID.
 ## Support
 
 For any questions or assistance, please contact m.mosa30@hotmail.com.
-
 
 
 ## Features
@@ -146,11 +146,11 @@ To run the Pilotes Order Management Application locally using Docker Compose, fo
 
 4. Build and start the containers:
 ```bash
-  docker-compose up -d --build
+docker-compose up -d --build
 ```
 5. Access the application in your web browser at http://localhost:8080.
 
 6. To stop the containers, use the following command:
 ```bash
-  docker-compose down
+docker-compose down
 ```
